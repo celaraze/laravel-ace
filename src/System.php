@@ -19,8 +19,7 @@ class System
 
         $time = $step2['time'] - $step1['time'];
         $total = $step2['total'] - $step1['total'];
-        $usage = bcdiv($time, $total, 3);
-        return $usage;
+        return bcdiv($time, $total, 3);
     }
 
     /**
@@ -43,13 +42,12 @@ class System
     /**
      * 查看内存使用率 Linux.
      *
-     * @return int|string 使用率
+     * @return string 使用率
      */
     static function getUsageOfLinuxMemory()
     {
         $str = shell_exec("free -m");
         $arr = preg_split('/\s+/is', $str);
-        $usage = bcdiv($arr[9], $arr[8], 3);
-        return 1 - $usage;
+        return bcdiv($arr[9], $arr[8], 3);
     }
 }
