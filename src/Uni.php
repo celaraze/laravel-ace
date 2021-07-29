@@ -229,7 +229,7 @@ class Uni
      * @param bool $array
      * @return array
      */
-    static function make(int $code, string $message, $data = null, bool $array = false)
+    static function response(int $code, string $message, $data = null, bool $array = false)
     {
         $return = [];
         $return['code'] = $code;
