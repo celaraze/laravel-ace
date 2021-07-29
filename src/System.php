@@ -47,10 +47,9 @@ class System
      */
     static function getUsageOfLinuxMemory()
     {
-        $str = shell_exec("more /proc/meminfo");
-        $mode = "/(.+):\s*([0-9]+)/";
-        preg_match_all($mode, $str, $arr);
-        $usage = bcdiv($arr[2][1], $arr[2][0], 3);
+        $str = shell_exec("free -m");
+        $arr = preg_split('/\s+/is', $str);
+        $usage = bcdiv($arr[9], $arr[8], 3);
         return 1 - $usage;
     }
 }
