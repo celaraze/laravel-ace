@@ -1,9 +1,9 @@
 {
   "name": "celaraze/laravel-ace",
-  "description": "Adding more useful libraries to PHP.",
+  "description": "many useful libraries for Laravel.",
   "type": "library",
   "license": "MIT",
-  "version": "dev-master",
+  "version": "dev-main",
   "authors": [
     {
       "name": "celaraze",

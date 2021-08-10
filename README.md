@@ -6,13 +6,15 @@
 
 #### 安装
 
-```composer require celaraze/pour```
+```composer require celaraze/laravel-ace```
 
 #### 说明
 
 ###### 文件夹&文件
 
 ---
+
+```Arr.php``` 数组处理的类库。
 
 ```System.php``` 与服务器本地相关操作的类库。
 

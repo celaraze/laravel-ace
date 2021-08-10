@@ -61,7 +61,7 @@ class Uni
      * 去除字符串中的各种换行符和空格.
      *
      * @param string $string 需要处理的字符串
-     * @return string|string[]|null 处理结果
+     * @return string 处理结果
      */
     static function trim(string $string)
     {
@@ -216,7 +216,7 @@ class Uni
      *
      * @return string[] 0是正常，1是禁用
      */
-    static function disabled(): array
+    static function disabled()
     {
         return ['正常', '禁用'];
     }
