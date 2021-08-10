@@ -11,7 +11,7 @@ class Arr
      * @param $count
      * @return array
      */
-    public function paginate($array, $count)
+    public static function paginate($array, $count)
     {
         $return = [];
         for ($i = 0; $i < count($array); $i += $count) {
