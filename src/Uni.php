@@ -245,6 +245,6 @@ class Uni
             return $return;
         }
 
-        return response()->json($return);
+        return response()->json($return)->setEncodingOptions(JSON_UNESCAPED_UNICODE);
     }
 }
