@@ -56,4 +56,15 @@ class DateTime
         }
         return $week;
     }
+
+    /**
+     * 获取当前毫秒级时间
+     * @return int 毫秒级时间
+     */
+    static function ms()
+    {
+        list($ms, $seconds) = explode(' ', microtime());
+        $ms_time = (float)sprintf('%.0f', (floatval($ms) + floatval($seconds)) * 1000);
+        return (int)$ms_time;
+    }
 }
