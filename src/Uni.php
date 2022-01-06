@@ -224,19 +224,19 @@ class Uni
     /**
      * 通用的接口返回构造数组.
      * @param int $code
-     * @param string $message
+     * @param $message
      * @param $data
      * @param bool $array
      * @return array
      */
-    static function response(int $code, string $message, $data = null, bool $array = false)
+    static function response(int $code, $message, $data = null, bool $array = false)
     {
         $return = [];
         $return['code'] = $code;
-        if ($data instanceof Exception) {
+        if ($message instanceof Exception) {
             $return['code'] = 500;
-            $message = $data->getLine() . ' : ' . $data->getMessage();
-            $data = [];
+            $data = $message->getTrace();
+            $message = $message->getFile() . ':' . $message->getLine() . ' ' . $message->getMessage();
         }
         $return['message'] = $message;
         $return['data'] = $data;
