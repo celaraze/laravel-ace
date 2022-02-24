@@ -33,4 +33,4 @@
 
 #### 开源协议
 
-Pour 遵循 MIT 开源协议。
+Laravel Ace 遵循 MIT 开源协议。
